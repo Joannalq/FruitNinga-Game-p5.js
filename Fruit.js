@@ -90,7 +90,7 @@ function randomFruit() {
   var image_s =  random(images_sliced);
  
   //var size = noise(frameCount) * 20 + 20; // Randomiza el tamaño
-  var bad = (random() > BAD_FRUIT_PROBABILITY); // Buena fruta o mala fruta
+  var bad = (random() > BAD_FRUIT_PROBABILITY); // good or bad
   // var r = (bad) ? 225 : 0;
   // var g = (bad) ? 0 : noise(frameCount * 2) * 255;
   // var b = (bad) ? 0 : noise(frameCount * 3) * 255;

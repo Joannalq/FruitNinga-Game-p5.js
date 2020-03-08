@@ -55,12 +55,11 @@ function draw() {
  */
 function handleMouse() {
 
-	if (mouseIsPressed) { // Balanceo
+	if (mouseIsPressed) { //swinging
 		sword.swing(mouseX, mouseY);
 	}
 
-  if (frameCount % 2 === 0) { // Actualizar en la mitad de tiempo
-
+  if (frameCount % 2 === 0) { // update half the time
 		sword.update();
 	}
 
@@ -68,12 +67,12 @@ function handleMouse() {
 }
 
 /**
- * Empuja y actualiza la fruta
- * Devuelve el número de puntos conseguidos
+ * pushes and updates fruit
+ * returns number of points scored
  */
 function handleFruit() {
 
-	/* Empuja una nueva fruta */
+	/* push new fruit */
   if (frameCount % 10 === 0) {
 
 		if (noise(frameCount) > 0.66) {
@@ -82,29 +81,28 @@ function handleFruit() {
 		}
 	}
 
-	/* Manejo de corte de la fruta */
+	/* handle slicing fruit  */
 	var points = 0;
 	for (var i = fruit.length - 1; i >= 0; i--) {
 
 		fruit[i].update();
 		fruit[i].draw();
 
-		if (!fruit[i].visible) { // Si la fruta ya no está en pantalla
+		if (!fruit[i].visible) { // if the fruit is no longer on-screen
 
-			if (!fruit[i].sliced && !fruit[i].bad) { // Si no hemos cortado y no es una mala fruta
-
+			if (!fruit[i].sliced && !fruit[i].bad) { // if we haven't sliced & it's not a bad
 				lives--;
 			}
 
-			if (lives < 1) { // Este es el fin del juego
+			if (lives < 1) { //game over
 
 				endGame();
 			}
 
-			fruit.splice(i, 1); // Elimina la fruta invisible del array
+			fruit.splice(i, 1); //delete invisible fruit from array
 		} else {
 
-			points += (sword.checkForSlice(fruit[i])) ? 1 : 0; // Si cortamos la fruta, agreguemos los puntos
+			points += (sword.checkForSlice(fruit[i])) ? 1 : 0; // if we sliced the fruit, add to the points
 		}
 
 	}
@@ -113,24 +111,24 @@ function handleFruit() {
 }
 
 /**
- * cut the fruit results
+ * draws lives in the top right
  */
 function drawLives() {
 
-//   stroke(255);
-//   strokeWeight(3);
+  stroke(255);
+  strokeWeight(3);
   fill("#FF00EE");
   
 
   for (var i = lives; i > 0; i--) {
-		//ellipse(width - (i * 20 + 20), 50, 20);
-		image(img, 30, 20);	
+		ellipse(width - (i * 20 + 20), 50, 20);
+		
 	}
 
 }
 
 /**
- * Dibujamos los puntos en la parte superior izquierda
+ * draws score in the top left
  */
 function drawScore() {
   textAlign(LEFT);
@@ -141,7 +139,7 @@ function drawScore() {
 }
 
 /**
- * Termina el ciclo y escribe el mensaje
+ * ends the loop, draws message
  */
 function endGame() {
 
