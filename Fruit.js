@@ -61,7 +61,7 @@ Fruit.prototype.draw = function() {
   if (this.bad) {
     // stroke(51);
     // strokeWeight(5);
-    tint(100, 153, 204);
+    tint(249,23,7);
     image(this.image_s, this.position.x, this.position.y,40,40);
   } else {
     //noStroke();
