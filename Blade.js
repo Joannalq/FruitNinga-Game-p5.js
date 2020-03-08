@@ -1,23 +1,23 @@
 function Blade(color) {
 
-  this.swipes = []; // Desvanecimiento de la Espada
+  this.swipes = []; 
 
   this.color = color;
 }
 
 /**
- * Desvanecimiento de los Movimientos
+ * after cut the image
  */
 Blade.prototype.update = function() {
 
   /* Desvanecer el Golpe */
-  if (this.swipes.length > BLADE_SIZE) { // Elimina cada dos frames
+  if (this.swipes.length > BLADE_SIZE) { //fixed length
 
     this.swipes.splice(0, 1);
     this.swipes.splice(0, 1);
   } else if (this.swipes.length > 0) {
 
-    this.swipes.splice(0, 1); // Elimina el ultimo valor
+    this.swipes.splice(0, 1); 
   }
 };
 
@@ -50,9 +50,7 @@ Blade.prototype.checkForSlice = function(fruit) {
   return sliced;
 };
 
-/**
- * Dibuja la espada
- */
+//after cut success, change the color
 Blade.prototype.draw = function() {
 
   var length = this.swipes.length;
@@ -72,6 +70,5 @@ Blade.prototype.draw = function() {
  * Balanceo de la espada
  */
 Blade.prototype.swing = function(x, y) {
-
   this.swipes.push(createVector(x, y));
 };
