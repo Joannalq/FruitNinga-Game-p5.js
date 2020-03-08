@@ -1,12 +1,12 @@
-function Fruit(x, y, image_s, size, color, bad) {
+function Fruit(x, y, image_s, bad) {
 
 	this.position = createVector(x, y);
 
   this.bad = bad; // bad fruit
 
   this.image_s = image_s; 
-  this.size = size;
-  this.color=color;
+  // this.size = size;
+  // this.color=color;
 
 	this.velocity = createVector(randomXVelocity(x), random(-7, -11));
 
@@ -38,7 +38,7 @@ Fruit.prototype.update = function() {
  * draw and fade the image color
  */
 Fruit.prototype.draw = function() {
-  var fillColor = this.color;
+  //var fillColor = this.color;
   if (this.sliced) {
 
     if (this.bad) {
@@ -70,7 +70,7 @@ Fruit.prototype.draw = function() {
 
   // let images = [img, img1,img2];
   // let img_random = random(images); 
-  fill(fillColor);
+  //fill(fillColor);
   noTint();
   image(this.image_s, this.position.x, this.position.y);
  
@@ -91,13 +91,14 @@ function randomFruit() {
  
   //var size = noise(frameCount) * 20 + 20; // Randomiza el tamaño
   var bad = (random() > BAD_FRUIT_PROBABILITY); // Buena fruta o mala fruta
-  var r = (bad) ? 225 : 0;
-  var g = (bad) ? 0 : noise(frameCount * 2) * 255;
-  var b = (bad) ? 0 : noise(frameCount * 3) * 255;
+  // var r = (bad) ? 225 : 0;
+  // var g = (bad) ? 0 : noise(frameCount * 2) * 255;
+  // var b = (bad) ? 0 : noise(frameCount * 3) * 255;
 
-  var col = color(r, g, b); // color
+  // var col = color(r, g, b); // color
   print(bad);
-  return new Fruit(x, y, image_s,size,col, bad);
+  //return new Fruit(x, y, image_s,size,col, bad);
+  return new Fruit(x, y, image_s, bad);
 }
 
 /**
