@@ -63,6 +63,7 @@ Fruit.prototype.draw = function() {
     // strokeWeight(5);
     tint(249,23,7);
     image(this.image_s, this.position.x, this.position.y,40,40);
+  
   } else {
     //noStroke();
     noTint();
@@ -85,7 +86,7 @@ function randomFruit() {
   var x = random(width);
   var y = height;
 
-  var size = noise(frameCount) * 20 + 20; // random size
+  //var size = noise(frameCount) * 20 + 20; // random size
   var images_sliced = [img, img1,img2, img3];
   var image_s =  random(images_sliced);
  

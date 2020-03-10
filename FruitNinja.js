@@ -50,9 +50,7 @@ function draw() {
 	drawLives();
 }
 
-/**
- * Balanceo y dibujo de la espada
- */
+//swings and draws the sword
 function handleMouse() {
 
 	if (mouseIsPressed) { //swinging
@@ -117,12 +115,11 @@ function drawLives() {
 
   stroke(255);
   strokeWeight(3);
-  fill("#FF00EE");
+  fill("#FF3333");
   
 
   for (var i = lives; i > 0; i--) {
 		ellipse(width - (i * 20 + 20), 50, 20);
-		
 	}
 
 }
