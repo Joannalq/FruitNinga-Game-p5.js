@@ -5,3 +5,7 @@ for Web Server in Python 3
 ```
 python -m http.server  
 ```
+for Web Server in Python 2
+```
+python -m SimpleHTTPServer 8000
+```
