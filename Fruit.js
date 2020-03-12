@@ -51,8 +51,8 @@ Fruit.prototype.draw = function() {
     // let c = color(0, 204, 0);
     // fillColor = lerpColor(this.color, c, interp);
     
-    tint(0, 153, 204); // Tint blue and set transparency
-    image(this.image_s, this.position.x, this.position.y,40,40);
+    //tint(0, 153, 204); // Tint blue and set transparency
+    //image(this.image_s, this.position.x, this.position.y,40,40);
   }else{
     noTint();
   }
@@ -72,7 +72,7 @@ Fruit.prototype.draw = function() {
   // let img_random = random(images); 
   //fill(fillColor);
   noTint();
-  image(this.image_s, this.position.x, this.position.y);
+  // image(this.image_s, this.position.x, this.position.y);
  
 };
 
