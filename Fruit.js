@@ -44,22 +44,23 @@ Fruit.prototype.draw = function() {
     if (this.bad) {
       /* game over */
       endGame();
+    }else{
+      image(img_y, this.position.x, this.position.y);
     }
-    // hide the image
-    // rectMode(RADIUS); // Set rectMode to RADIUS
-    // fill(255); 
-    // rect(this.position.x, this.position.y, 40, 40);
-    image(img_y, this.position.x, this.position.y);
-
+    
   }else{
     noTint();
   }
 
   /*  determine stroke based upon bad */
   if (this.bad) {
-    tint(249,23,7);
-    image(this.image_s, this.position.x, this.position.y,40,40);
-  
+    if(this.image_s==img2){
+      image(this.image_s, this.position.x, this.position.y);
+    }else{
+      tint(249,23,7);
+      image(this.image_s, this.position.x, this.position.y,40,40);
+    }
+    
   } else {
     noTint();
     image(this.image_s, this.position.x, this.position.y);
@@ -83,15 +84,17 @@ function randomFruit() {
   var y = height;
 
   //var size = noise(frameCount) * 20 + 20; // random size
-  var images_sliced = [img, img1,img2];
+  var images_sliced = [img,img1,img3];
   var image_s =  random(images_sliced);
+  var image_bad = [img,img1,img2];
+  var image_b = random(image_bad);
  
   //var size = noise(frameCount) * 20 + 20; // Randomiza el tamaño
   var bad = (random() > BAD_FRUIT_PROBABILITY); // good or bad
   
   print(bad);
   if(bad){
-    return new Fruit(x, y, img3, bad);
+    return new Fruit(x, y, image_b, bad);
   }else{
     return new Fruit(x, y, image_s, bad);
   }
