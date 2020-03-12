@@ -45,27 +45,22 @@ Fruit.prototype.draw = function() {
       /* game over */
       endGame();
     }
+    // hide the image
+    // rectMode(RADIUS); // Set rectMode to RADIUS
+    // fill(255); 
+    // rect(this.position.x, this.position.y, 40, 40);
+    image(img_y, this.position.x, this.position.y);
 
-    var interp = constrain(this.slicedTime, 0, 15) / 15; // how much to interpolate
-    
-    // let c = color(0, 204, 0);
-    // fillColor = lerpColor(this.color, c, interp);
-    
-    //tint(0, 153, 204); // Tint blue and set transparency
-    //image(this.image_s, this.position.x, this.position.y,40,40);
   }else{
     noTint();
   }
 
   /*  determine stroke based upon bad */
   if (this.bad) {
-    // stroke(51);
-    // strokeWeight(5);
     tint(249,23,7);
     image(this.image_s, this.position.x, this.position.y,40,40);
   
   } else {
-    //noStroke();
     noTint();
     image(this.image_s, this.position.x, this.position.y);
   }
@@ -93,11 +88,7 @@ function randomFruit() {
  
   //var size = noise(frameCount) * 20 + 20; // Randomiza el tamaño
   var bad = (random() > BAD_FRUIT_PROBABILITY); // good or bad
-  // var r = (bad) ? 225 : 0;
-  // var g = (bad) ? 0 : noise(frameCount * 2) * 255;
-  // var b = (bad) ? 0 : noise(frameCount * 3) * 255;
-
-  // var col = color(r, g, b); // color
+  
   print(bad);
   if(bad){
     return new Fruit(x, y, img3, bad);
@@ -105,8 +96,6 @@ function randomFruit() {
     return new Fruit(x, y, image_s, bad);
   }
   
-  //return new Fruit(x, y, image_s,size,col, bad);
-  //return new Fruit(x, y, image_s, bad);
 }
 
 /**

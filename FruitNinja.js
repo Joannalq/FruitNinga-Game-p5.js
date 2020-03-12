@@ -19,6 +19,8 @@ function preload() {
 	img1 = loadImage('./imgs/bubble-tea.png');
 	img2 = loadImage('./imgs/slow.png');
 	img3 = loadImage('./imgs/book.png');
+	img_y = loadImage('./imgs/yes-1.png');
+
   }
 
 function setup() {
