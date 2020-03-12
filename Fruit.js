@@ -67,6 +67,7 @@ Fruit.prototype.draw = function() {
   } else {
     //noStroke();
     noTint();
+    image(this.image_s, this.position.x, this.position.y);
   }
 
   // let images = [img, img1,img2];
@@ -87,7 +88,7 @@ function randomFruit() {
   var y = height;
 
   //var size = noise(frameCount) * 20 + 20; // random size
-  var images_sliced = [img, img1,img2, img3];
+  var images_sliced = [img, img1,img2];
   var image_s =  random(images_sliced);
  
   //var size = noise(frameCount) * 20 + 20; // Randomiza el tamaño
@@ -98,8 +99,14 @@ function randomFruit() {
 
   // var col = color(r, g, b); // color
   print(bad);
+  if(bad){
+    return new Fruit(x, y, img3, bad);
+  }else{
+    return new Fruit(x, y, image_s, bad);
+  }
+  
   //return new Fruit(x, y, image_s,size,col, bad);
-  return new Fruit(x, y, image_s, bad);
+  //return new Fruit(x, y, image_s, bad);
 }
 
 /**
