@@ -24,7 +24,14 @@ function preload() {
   }
 
 function setup() {
-	let c = createCanvas(600, 400);//the frame
+	// var cnv = createCanvas(750, 600);
+	var cnv = createCanvas(windowWidth*0.45, windowHeight*0.55);
+	// method1: position the convas
+	// var axis_x = (windowWidth - width)/6;
+	// var axis_y = (windowWidth - height)/6;
+	// cnv.position(axis_x,axis_y);
+
+	cnv.parent('game-container');
 	background(255, 204, 100);
 	
 	// here we use a callback to display the image after loading

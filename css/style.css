@@ -1,0 +1,74 @@
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+}
+
+html{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+}
+body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;   
+}
+
+
+/* header part */
+#header-holder{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    top: 0;
+    width: 100%;
+    height: 20vh;
+    /* background-color: blueviolet; */
+    
+}
+
+/* content part */
+#game-holder{
+    height: 62vh;
+    padding: 5vh 5vw;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    /* background-color: burlywood; */
+}
+
+#game-holder .content{
+    padding: 10px;
+}
+#game-container{
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+}
+
+.instruction{
+    float: left;
+    background-color: blanchedalmond;
+}
+/* footer part */
+footer{
+    width: 100%;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 300;
+    border-top:var(--main-red) ;
+    /* background-color: cornflowerblue; */
+    padding: 2vh 0;
+}
+#footer-holder p{
+    line-height: 5vh;
+    margin: 0;
+}
+
+#footer-holder a{
+    text-decoration: none;
+    color: black;
+}
