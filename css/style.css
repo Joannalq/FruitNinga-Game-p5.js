@@ -17,6 +17,7 @@ body {
 }
 
 
+
 /* header part */
 #header-holder{
     display: flex;
@@ -34,7 +35,7 @@ body {
     height: 62vh;
     padding: 5vh 5vw;
     display: grid;
-    grid-template-columns: 65% 35%;
+    grid-template-columns: 60% 40%;
     /* background-color: burlywood; */
 }
 
@@ -44,12 +45,23 @@ body {
 #game-container{
     display: flex;
     justify-content: center;
-    background-color: burlywood;
+    /* background-color: burlywood; */
+    padding: 10px;
 }
 
+#game-container .canvasHolder{
+    display: flex;
+    justify-content: center;
+    cursor: -webkit-grab; 
+    cursor: grab;
+}
+
+/* game instruction */
 .instruction{
     float: left;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    font-family: cursive;
+    color: #f1b725;
 }
 /* footer part */
 footer{
@@ -66,9 +78,10 @@ footer{
 #footer-holder p{
     line-height: 5vh;
     margin: 0;
+    color: #f1b725;
 }
 
 #footer-holder a{
     text-decoration: none;
-    color: black;
+    color: #f16228;
 }

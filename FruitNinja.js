@@ -25,21 +25,15 @@ function preload() {
 
 function setup() {
 	// var cnv = createCanvas(750, 600);
+	
 	var cnv = createCanvas(windowWidth*0.45, windowHeight*0.55);
+	//var cnv = createCanvas(canvaslength, canvaswidth);
 	// method1: position the convas
 	// var axis_x = (windowWidth - width)/6;
 	// var axis_y = (windowWidth - height)/6;
 	// cnv.position(axis_x,axis_y);
 
-	cnv.parent('game-container');
-	background(255, 204, 100);
-	
-	// here we use a callback to display the image after loading
-	// img_good = image(img,0,0,10,10);
-	// img_1 = image(img1,0,0,20,20);
-	// img_2 = image(img2,0,0,20,20);
-	// img_3 = image(img3,0,0,20,20);
-
+	cnv.parent('canvasHolder');
 
 	sword = new Blade(color("#824859"));
 	frameRate(60);
@@ -50,8 +44,8 @@ function setup() {
 
 //after draw the color
 function draw() {
-	background("#b6f8f1"); //Canvas background color
-
+	// background("#b6f8f1"); //Canvas background color
+	background("#f6ea8c");
 	handleMouse();
 	score += handleFruit();
 

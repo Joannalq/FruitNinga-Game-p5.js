@@ -13,7 +13,7 @@
 		<script type="text/javascript" src="Fruit.js"></script>
 		<!-- <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script> -->
 	</head>
-	<body style="background-image: url('imgs/background.jpg'); background-repeat: no-repeat; background-size: 100vw 100vh;">
+	<body style="background-image: url('imgs/background.jpg'); background-repeat: no-repeat; background-size: cover;">
 		<div id="content">
 			<div id="header-holder">
 				<img src="imgs/head.png" alt="game name" sizes="100vw, 100vh">
@@ -21,6 +21,12 @@
 			<div id="game-holder">
 				
 				<div id="game-container" class="game-container">
+					<div id="canvasHolder" class="canvasHolder">
+
+					</div>
+					<!-- <canvas id="myCanvas" width="100%" height="100%" style="border:1px solid #c3c3c3;">
+						Your browser does not support the canvas element.
+						</canvas> -->
 
 				</div>
 				<div class="instruction">
@@ -32,7 +38,8 @@
 					<ul>
 						<li>Alice <strong>always</strong> like learning new skills</li>
 						<li><strong>Sometimes</strong> she likes playing games or bubble-tea; however, sometimes she doesn't likes</li>
-						<li>She hates <strong>slow</strong></li>
+						<!-- if the bubble-tea and games change the color, it means she doesn't like them. You don't need to slice them. -->
+						<li>She hates <strong>slow things</strong></li>
 					</ul>
 					<p>tips:you need to observe carefully for the images or back to the source of the page</p>
 				</div>
@@ -40,7 +47,7 @@
 			</div>
 			<footer id="footer-holder">
 				<p>
-					&copy; Code by <a href="#" target="_blank">&nbsp;Joanna</a>
+					&copy; Code by <a href="https://joannalq.github.io/" target="_blank">&nbsp;Joanna</a>
 				</p>
 			</footer>
 		</div>
