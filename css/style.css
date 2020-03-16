@@ -5,6 +5,10 @@
     --main-gray: #303841;
 }
 
+*{
+    box-sizing: border-box;
+}
+
 html{
     width: 100vw;
     height: 100vh;
@@ -15,7 +19,6 @@ body {
     height: 100vh;
     margin: 0;   
 }
-
 
 
 /* header part */
@@ -34,19 +37,17 @@ body {
 #game-holder{
     height: 62vh;
     padding: 5vh 5vw;
-    display: grid;
-    grid-template-columns: 60% 40%;
+    /* display: grid; */
+    /* grid-template-columns: 65% 35%; */
     /* background-color: burlywood; */
 }
 
-#game-holder .content{
-    padding: 10px;
-}
 #game-container{
-    display: flex;
-    justify-content: center;
-    /* background-color: burlywood; */
-    padding: 10px;
+    /* display: flex; */
+    /* justify-content: center; */
+    width: 60%;
+    float: left;
+    text-align: center;
 }
 
 #game-container .canvasHolder{
@@ -56,12 +57,17 @@ body {
     cursor: grab;
 }
 
-/* game instruction */
+#instruction{
+    width: 40%;
+    float: left;
+
+}
+
 .instruction{
     float: left;
-    /* background-color: blanchedalmond; */
     font-family: cursive;
     color: #f1b725;
+    font-size: 1.2em;
 }
 /* footer part */
 footer{
@@ -76,6 +82,7 @@ footer{
     padding: 2vh 0;
 }
 #footer-holder p{
+    height: 5vh;
     line-height: 5vh;
     margin: 0;
     color: #f1b725;
