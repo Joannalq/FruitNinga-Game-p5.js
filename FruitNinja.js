@@ -23,15 +23,22 @@ function preload() {
 
   }
 
+function fitToContainer(canvas){
+	canvas.style.width='100%';
+	canvas.style.height='100%';
+	canvas.width  = canvas.offsetWidth;
+  	canvas.height = canvas.offsetHeight;
+}
+
 function setup() {
-	// var cnv = createCanvas(750, 600);
-	
-	var cnv = createCanvas(windowWidth*0.45, windowHeight*0.55);
-	//var cnv = createCanvas(canvaslength, canvaswidth);
+
 	// method1: position the convas
 	// var axis_x = (windowWidth - width)/6;
 	// var axis_y = (windowWidth - height)/6;
 	// cnv.position(axis_x,axis_y);
+	var parentCanvas = document.getElementById("canvasHolder");
+
+	var cnv = createCanvas(parentCanvas.offsetWidth, parentCanvas.offsetHeight);
 
 	cnv.parent('canvasHolder');
 
