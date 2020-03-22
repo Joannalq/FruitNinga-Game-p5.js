@@ -9,6 +9,15 @@
     box-sizing: border-box;
 }
 
+html, body{
+    background-image: url('../imgs/background.jpg'); 
+    background-repeat: no-repeat; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
 html{
     /* style="background-image: url('imgs/background.jpg') no-repeat center center fixed; background-size: cover;" */
    
@@ -36,18 +45,22 @@ body {
     height: 100%;
 }
 
+/* phone size */
+@media (max-width: 600px){
+    #header-holder{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        top: 0;
+        width: 100%;
+        height: 20vh;
+        /* background-color: blueviolet; */
+        
+    }
+}
+
 /* big screen */
 @media (min-width: 992px){
-    html, body{
-        background-image: url('../imgs/background.jpg'); 
-        background-repeat: no-repeat; 
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-    }
-
-
     /* header part */
     #header-holder{
         display: flex;
