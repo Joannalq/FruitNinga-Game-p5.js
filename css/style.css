@@ -100,14 +100,14 @@ body {
         /* display: grid;
         grid-template-columns: 55% 45%; */
         display: flex;
-        background-color: paleturquoise;
+        /* background-color: paleturquoise; */
     }
 
     #game-holder .game-container{
         float: left;
         width: 55%;
         padding: 10px;
-        background-color: palevioletred;
+        /* background-color: palevioletred; */
         padding-left: 5%;
         padding-right: 5%;
     }
@@ -146,7 +146,7 @@ body {
     border-top:var(--main-red) ;
     /* background-color: cornflowerblue; */
     padding: 2vh 0;
-    background-color: green;
+    /* background-color: green; */
 }
 #footer-holder p{
     /* height: 100%; */
