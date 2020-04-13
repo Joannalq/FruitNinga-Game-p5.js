@@ -155,8 +155,8 @@ function endGame() {
   textAlign(CENTER);
   noStroke();
   fill("#888888");
-  textSize(100);
-  text("Game over!", width / 2, height / 2);
   textSize(50);
+  text("Game over!", width / 2, height / 2);
+  textSize(25);
   text("Press f5 to restart!", width / 2, height / 2 + 60);
 }
