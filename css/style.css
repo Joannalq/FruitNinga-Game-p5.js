@@ -50,7 +50,6 @@ body{
 /* game and instruction part */
 #game-holder .game-container{
     padding: 10px;
-    /* background-color: palevioletred; */
     padding-left: 5%;
     padding-right: 5%;
 }
@@ -111,7 +110,6 @@ body{
     #game-holder{
         display: grid;
         grid-template-rows: 1fr 1fr;
-        /* background-color: paleturquoise; */
     }
 
     #game-holder .instruction{
